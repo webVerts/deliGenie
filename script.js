@@ -71,7 +71,7 @@ function circle(outlet){
 }
 
 var myIcon = L.icon({
-	iconUrl: 'https://raw.githubusercontent.com/webVerts/deliGenie/main/images/restaurant.png',
+	iconUrl: 'images/restaurant.png',
 	iconSize:[30,40]
 	
 });
