@@ -3,6 +3,8 @@ const restaurantList = [
       "type": "Feature",
       "properties": {
         "name": "Hotel Sholay",
+	      	"diet":"Non Veg",
+	      	"cuisine":"North Indian",
 		"radius":"1000"
       },
       "geometry": {
@@ -17,6 +19,8 @@ const restaurantList = [
       "type": "Feature",
       "properties": {
         "name": "Hotel ZNBD",
+	      	"diet":" Veg",
+	      	"cuisine":"Spanish, North Indian",
 		"radius":"3000"
       },
       "geometry": {
@@ -31,6 +35,8 @@ const restaurantList = [
       "type": "Feature",
       "properties": {
         "name": "Hotel Vikram",
+	      	"diet":"Non Veg",
+	      	"cuisine":"South Indian",
 		"radius":"1500"
       },
       "geometry": {
@@ -43,7 +49,11 @@ const restaurantList = [
     },
     {
       "type": "Feature",
-      "properties": {"name":"Hotel Nanban","radius":"2000"},
+      "properties": {
+	      	     "name":"Hotel Nanban",
+		     "diet":"Veg",
+	      	     "cuisine":"South Indian",
+		     "radius":"2000"},
       "geometry": {
         "coordinates": [
           80.25840488907988,
