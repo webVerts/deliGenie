@@ -2,7 +2,7 @@ var map = L.map('map').setView([13.0864,80.2644], 14);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	minZoom: 7,
     maxZoom: 18,
-    attribution: ' &copy; webGenie contributors  | DO NOT USE FOR ANY COMMERCIAL PURPOSES | Disclaimer  | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: ' &copy; deliGenie contributors  | DO NOT USE FOR ANY COMMERCIAL PURPOSES | Disclaimer  | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
 
