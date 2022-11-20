@@ -71,7 +71,7 @@ function circle(outlet){
 }
 
 var myIcon = L.icon({
-	iconUrl: 'images/restaurant.png',
+	iconUrl: '/images/restaurant.png',
 	iconSize:[30,40]
 	
 });
