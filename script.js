@@ -1,4 +1,5 @@
 var map = L.map('map').setView([13.0864,80.2644], 14);
+var theMarker;
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	minZoom: 7,
     maxZoom: 18,
@@ -7,6 +8,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 /* Adding a custom default location for test purposes. Should be removed when used on live websites */
+
 
 var myIcon = L.icon({
 	iconUrl: 'images/restaurant.png',
@@ -22,9 +24,9 @@ function onEachFeature(feature, layer) {
 				layer.on('click', function (e)
 	
 					{
-					
 					  createCircle(feature);
-					  layer.bindPopup(PopupContent(feature));
+					  if(!layer.getPopup()){
+					  layer.bindPopup(PopupContent(feature)).openPopup();}
 					}
 				)}
 
@@ -43,12 +45,11 @@ $.getJSON('https://raw.githubusercontent.com/webVerts/vC/main/data.json', functi
 });
 
 function PopupContent(outlet){
-	console.log(outlet)
+
 	var name = outlet.properties.name;
 	var diet = outlet.properties.diet;
 	var cuisine = outlet.properties.cuisine;
 	var KM = (outlet.properties.radius)/1000;
-	//console.log(name,diet,cuisine,KM)
 	
 	return `<div>
 	<h4> ${name} </h1>
@@ -57,7 +58,7 @@ function PopupContent(outlet){
 	<p> ${KM} KM Free delivery </p>
 	<a href ="#"> Menu </a><br><br>
 	<a href ="#"> Contact  </a>
-	</div> `
+	</div> `;
 	
 
 	
@@ -70,8 +71,8 @@ function createCircle(outlet){
 	
 	function op(outlet)
 	{
-		var theMarker = {};
-		console.log(lat)
+		
+		
 		
 		
 		var radius = outlet.properties.radius;
@@ -89,6 +90,7 @@ function createCircle(outlet){
 			theMarker = L.circle([lat,lng], {radius: radius,color: '#c6993a', fillOpacity:0.00
 			}).addTo(map); 
 			
+			return 0;
 	}
 	
 	
